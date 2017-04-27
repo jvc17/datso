@@ -1,0 +1,22 @@
+<%= form_for :producto, :url => {:controller => "control", :action => "insertar_post"}, :method => :post, :html => { :class => "form-horizontal" , :id => "form_producto"}  do |f| %>
+  <div class="form-group">
+    <div class="col-sm-8">
+      <input type="text" class="form-control" placeholder="Ingrese nombre del cliente" name="txt_cliente_atencion">
+    </div>
+    <div class="col-sm-8">
+      <input type="number" class="form-control" placeholder="Ingrese valoracion del cliente" name="num_valoracion_atencion">
+    </div>
+    <div class="col-sm-2">
+      <input type="submit" value="Enviar"/>
+    </div>
+  </div>
+   <% end %>
+  
+ <% if @txt_cliente_atencion %>
+ <h4>
+   El nombre del cliente es: <%= @txt_cliente_atencion %> <br/>
+   La valoracion es: <%= @num_valoracion_atencion %>
+ </h4>
+<% else %>
+ 
+<% end %>
